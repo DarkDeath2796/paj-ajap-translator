@@ -14,7 +14,7 @@ body {
 textarea {
     width: 900px;
     max-width: 900px;
-    font-family: 'Segoe Ui';
+    font-family: 'Segoe UI';
     height: 150px;
     margin: 1em;
     padding: 1em;
@@ -25,6 +25,7 @@ textarea {
     font-size: 1.1em;
     resize: none;
     box-shadow: 0 0 35px rgba(10, 48, 10, 0.7);
+    box-sizing: border-box;
 }
 
 button {
@@ -72,7 +73,7 @@ button:disabled {
     display: flex;
     justify-content: center;
     /* padding-top: 0px; */
-    margin: -30px;
+    margin-top: -1.5em;
 }
 
 #thoughs {

@@ -2,7 +2,14 @@ const button = document.getElementById('translate-button')
 
 async function translate() {
   const text = document.getElementById('orig').value;
-  document.getElementById('paj').value = 'Translating'
+  
+  try {
+    const res = await fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en');
+    const data = await res.json();
+    document.getElementById('paj').value = data.text;
+  } catch (e) {
+    document.getElementById('paj').value = 'Translating...';
+  }
 
   button.disabled = true;
 

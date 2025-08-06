@@ -6,7 +6,7 @@ async function translate() {
   try {
     const res = await fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en');
     const data = await res.json();
-    document.getElementById('paj').value = data.text;
+    document.getElementById('paj').value = 'Did you know that... ' + data.text;
   } catch (e) {
     document.getElementById('paj').value = 'Translating...';
   }
